@@ -1,0 +1,29 @@
+public class Main {
+    public static void main(String[] args) {
+       int valor1=1;
+       int valor2=2;
+       int valor3=3;
+
+       var total=suma(valor1, valor2, valor3);
+
+       System.out.println(total);
+       Coche miCoche = new Coche();
+       miCoche.añadirPuertas();
+
+        System.out.println(miCoche.puertas);
+
+    }
+
+    public static int suma(int a, int b, int c){
+
+        return a+b+c;
+    }
+}
+
+class Coche {
+    public int puertas=0;
+
+    public void añadirPuertas(){
+        this.puertas++;
+    }
+}
