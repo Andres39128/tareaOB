@@ -1,0 +1,49 @@
+public class segundatarea {
+    public static void main(String[] args) {
+        int numeroIf = 0;
+
+        if (numeroIf <=-1 ) {
+            System.out.println("El número es negativo");
+        }else if (numeroIf >=1){
+            System.out.println("El número es positivo");
+        }else
+        System.out.println("El número es cero");
+
+        int i=0;
+        while (i <=3) {
+            System.out.println(i);
+        i++;}
+
+        int i2=0;
+        do {
+            i2++;
+        }
+        while (i2 < 3);
+        System.out.println( "El número ahora es: "+i2);
+
+
+        for (int numeroFor = 0; numeroFor <= 3; numeroFor++) {
+            System.out.println("Número for ahora es: "+numeroFor);
+        }
+
+        String estacion="verakjjno";
+        switch (estacion){
+            case "verano":
+                System.out.println("Hace mucho calor es "+estacion);
+                break;
+            case "invierno":
+                System.out.println("Hace mucho frio es "+estacion);
+                break;
+            case "otoño":
+                System.out.println("Las hojas de los arboles se caen es "+estacion);
+                break;
+            case "primavera":
+                System.out.println("Todo florece es "+estacion);
+                break;
+            default:
+                System.out.println("No es una estación del año");
+                break;
+        }
+    }
+
+}
