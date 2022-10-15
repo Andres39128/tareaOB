@@ -1,0 +1,114 @@
+public class NewClass {
+    public static void main(String[] args){
+
+        Cliente cliente1 = new Cliente( 34, "Andres", 300300300, 10000000);
+        System.out.println(cliente1);
+        Trabajador trabajador1 = new Trabajador(54, "Jaime", 311500500, 2000000);
+        System.out.println(trabajador1);
+    }
+
+}
+
+class Persona{
+
+    int edad;
+    String nombre;
+    int telefono;
+
+    public Persona(int edad, String nombre, int telefono) {
+        this.edad = edad;
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "edad=" + edad +
+                ", nombre='" + nombre + '\'' +
+                ", telefono=" + telefono +
+                '}';
+    }
+
+}
+
+class Cliente extends Persona {
+    private int credito;
+
+    public Cliente(int edad, String nombre, int telefono, int credito) {
+        super(edad, nombre, telefono);
+        this.credito=credito;
+    }
+
+    public int getCredito() {
+        return credito;
+    }
+
+    public void setCredito(int credito) {
+        this.credito = credito;
+    }
+
+    @Override
+    public String toString() {
+        return "cliente{" + "edad=" + edad +
+                ", nombre='" + nombre + '\'' +
+                ", telefono=" + telefono+
+                "credito=" + credito +
+                '}';
+    }
+}
+
+class Trabajador extends Persona {
+
+    private int salario;
+
+    public Trabajador(int edad, String nombre, int telefono, int salario) {
+        super(edad, nombre, telefono);
+        this.salario = salario;
+    }
+
+    public Trabajador(int edad, String nombre, int telefono) {
+        super(edad, nombre, telefono);
+    }
+
+    public int getSalario() {
+        return salario;
+    }
+
+    public void setSalario(int salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "trabajador{" + "edad=" + edad +
+                ", nombre='" + nombre + '\'' +
+                ", telefono=" + telefono +
+                "salario=" + salario +
+                '}';
+    }
+}
